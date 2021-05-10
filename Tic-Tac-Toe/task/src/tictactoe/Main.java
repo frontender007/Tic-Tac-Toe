@@ -13,11 +13,9 @@ class Main {
             {' ', ' ', ' '}
     };
 
+
     public static void main(String args[]) {
 
-//        System.out.println("Enter cells: ");
-//        String userInput = scan.nextLine();
-//
         char currentPlayer = 'X';
         drawBoard(gameBoard);
 
@@ -28,23 +26,6 @@ class Main {
         }
 
     }//end of main method
-
-
-//    public static char[][] to2dArray(String s) {
-//
-//        char[][] twoDArray = new char[3][3];
-//        int index = 0;
-//        for (int i = 0; i < twoDArray.length; i++) {
-//            for (int j = 0; j < twoDArray[i].length; j++) {
-//
-//                twoDArray[i][j] = s.charAt(index);
-//                index++;
-//            }
-//        }
-//
-//        return twoDArray;
-//    }
-
 
     public static void playerMove(char[][] gameBoard, char player) {
         int index = 0;
@@ -150,27 +131,6 @@ class Main {
         }
         return false;
     } //end of hasEmptyCells method;
-//
-//    public static boolean gameImpossible(char[][] gameBoard) {
-//        int numX = 0;
-//        int numO = 0;
-//
-//        for (int j = 0; j < gameBoard.length; j++) {
-//            for (int i = 0; i < gameBoard[j].length; i++) {
-//                if (gameBoard[j][i] == 'X') {
-//                    numX += 1;
-//                } else if (gameBoard[j][i] == 'O') {
-//                    numO += 1;
-//                }
-//            }
-//        }
-//        int diff = Math.abs(numX - numO);
-//        if(xWon(gameBoard) && oWon(gameBoard) || diff > 1) {
-//            return true;
-//        }
-//
-//        return false;
-//    } //end of gameImpossible method
 
     public static boolean gameFinished(char[][] gameBoard) {
         if (!xWon(gameBoard) && !oWon(gameBoard)) {
@@ -184,9 +144,6 @@ class Main {
 
     public static void gameState(char[][] gameBoard) {
 
-//        if (gameImpossible(gameBoard)) {
-//            System.out.println("Impossible");
-//        }
          if (xWon(gameBoard)) {
             System.out.println("X wins");
         } else if (oWon(gameBoard)) {
@@ -194,9 +151,7 @@ class Main {
         } else if (gameFinished(gameBoard)) {
             System.out.println("Draw");
         }
-//        else {
-//            System.out.println("Game not finished");
-//        }
+
     }
 }
 
